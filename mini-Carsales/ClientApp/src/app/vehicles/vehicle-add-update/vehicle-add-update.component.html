@@ -1,0 +1,16 @@
+<div *ngIf="form">
+    <form (ngSubmit)="onSubmit()" [formGroup]="form">
+  
+      <div *ngFor="let control of controls" class="form-row">
+        <app-component-control [control]="control"  [form]="form" (outer)="onChange($event)" ></app-component-control>
+      </div>
+  
+      <div class="form-row">
+        <button type="submit" class="btn btn-primary" [disabled]="!form.valid">Save</button>
+        &nbsp;
+        <button  class="btn btn-primary"[routerLink]='[""]' >Back</button>
+      </div>
+    </form>
+  
+
+  </div>

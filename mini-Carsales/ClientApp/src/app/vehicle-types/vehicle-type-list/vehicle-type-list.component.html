@@ -1,0 +1,15 @@
+<button  class="btn btn-primary" [routerLink]='["/newtype"]' >Create</button>
+
+<div class="row" >
+    <div class="col-sm-1"*ngFor="let VehicleType of VehicleTypes" >
+      <div class="card">
+        <div class="card-body">
+          <h5 class="card-title">{{VehicleType.typeName}}</h5>
+          
+          <button type="button" class="btn btn-primary btn-sm" [routerLink]='["/modifytype", VehicleType.id ]'><i
+            class="fas fa-edit"></i></button>
+
+        </div>
+      </div>
+    </div>
+  </div>

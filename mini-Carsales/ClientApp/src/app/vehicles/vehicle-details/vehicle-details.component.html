@@ -1,0 +1,32 @@
+<div class="modal-header">
+  <h4 class="modal-title">Vehicle Details</h4>
+
+</div>
+<div class="modal-body text-center">
+
+  <ul class="list-group mb-3">
+    <li class="list-group-item d-flex justify-content-between lh-condensed">
+      <h6 class="my-0">ID</h6>
+      <small class="text-muted">{{vehicleDetail.vehicleId}}</small>
+    </li>
+    <li class="list-group-item d-flex justify-content-between lh-condensed">
+      <h6 class="my-0">TypeName</h6>
+      <small class="text-muted">{{vehicleDetail.typeName}}</small>
+    </li>
+    <li class="list-group-item d-flex justify-content-between lh-condensed">
+      <h6 class="my-0">Make</h6>
+      <small class="text-muted">{{vehicleDetail.make}}</small>
+    </li>
+    <li class="list-group-item d-flex justify-content-between lh-condensed">
+      <h6 class="my-0">Model</h6>
+      <small class="text-muted">{{vehicleDetail.model}}</small>
+    </li>
+    <li *ngFor="let property of vehicleDetail.vehicleDetail" class="list-group-item d-flex justify-content-between lh-condensed">
+      <h6 class="my-0">{{property.vehiclePropertyName}}</h6>
+      <small class="text-muted">{{property.propertyData}}</small>
+    </li>
+
+  </ul>
+
+
+</div>

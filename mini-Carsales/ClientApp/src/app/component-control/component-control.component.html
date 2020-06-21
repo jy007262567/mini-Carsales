@@ -1,0 +1,31 @@
+
+  <li class="list-group-item" [formGroup]="form">
+    <div class="input-group">
+        <div class="input-group-prepend">
+
+            <label class="input-group-text" [attr.for]="control.key">{{control.label}}</label>
+        </div>
+
+        <div [ngSwitch]="control.controlType">
+  
+          <input  class="form-control" *ngSwitchCase="'textbox'" [formControlName]="control.key"
+                  [id]="control.key" [type]="control.type">
+
+          <select class="form-control" [id]="control.key" *ngSwitchCase="'dropdown'" [formControlName]="control.key" (change)="onChange($event.target.value)">
+            <option *ngFor="let opt of control.options" [value]="opt.key">{{opt.value}}</option>
+          </select>
+        </div>
+        <div *ngIf="control.linkedControl">
+  
+
+          <select class="form-control"   [formControlName]="control.key+'_1'" >
+            <option>text</option>
+            <option>number</option>
+          </select>
+        </div>
+    </div>
+    <div class="errorMessage" *ngIf="!isValid">{{control.label}} is required</div>
+
+</li>
+
+  
