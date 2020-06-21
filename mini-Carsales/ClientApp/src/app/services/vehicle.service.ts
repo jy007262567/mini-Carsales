@@ -13,7 +13,7 @@ import { VehicleType } from './data-types/common.types';
 })
 export class VehicleService {
 
-  private url: string = "http://localhost:53084/api/vehicle/"
+  private url: string = "/api/vehicle/"
   constructor(private http: HttpClient) { }
 
   private getvehiclesUrl: string = this.url + "getvehicles";
