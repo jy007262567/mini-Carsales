@@ -3,7 +3,7 @@ Node: 12.16.0
 OS: win32 x64
 Asp.net core 3.1
 Bootstrap 4.5.0
-
+asfasdfasdf
 1:"mini-Carsales" folder 
 2:run command "dotnet run"
 3:http://localhost:5000
